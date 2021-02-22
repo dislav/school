@@ -1,0 +1,28 @@
+.news-card {
+    $root: &;
+    position: relative;
+
+    img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__date {
+        color: $gray;
+        @include font(16, 20);
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        color: $black;
+        @include font(16, 20);
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: $gray;
+        @include font(16, 20);
+        line-height: 1.2;
+    }
+}

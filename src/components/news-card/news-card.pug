@@ -1,0 +1,6 @@
+mixin news-card(props)
+    a(href="#").news-card&attributes(attributes)
+        +img({ src: props.image, alt: props.title })
+        .news-card__date= props.date
+        h3= props.title
+        p= props.description

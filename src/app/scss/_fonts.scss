@@ -1,0 +1,19 @@
+$font-helvetica: 'HelveticaNeueCyr';
+
+$fonts-helvetica: (
+    'HelveticaNeueCyr-Light': 400,
+    'HelveticaNeueCyr-Medium': 500,
+    'HelveticaNeueCyr-Bold': 700,
+);
+
+@each $font, $weight in $fonts-helvetica {
+    @font-face {
+        font-family: $font-helvetica;
+        src: url('../../assets/fonts/#{$font}.ttf') format('truetype'),
+            url('../../assets/fonts/#{$font}.woff') format('woff'),
+            url('../../assets/fonts/#{$font}.eot') format('eot');
+        font-weight: $weight;
+        font-style: normal;
+        font-display: swap;
+    }
+}

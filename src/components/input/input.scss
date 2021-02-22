@@ -1,0 +1,18 @@
+.input {
+    $root: &;
+    position: relative;
+
+    input {
+        width: 100%;
+        color: $black;
+        @include font(16, 20);
+        line-height: 1.2;
+        border-bottom: 1px solid $black;
+        padding: 4px 16px;
+
+        &::placeholder {
+            color: $gray;
+            @include font(16, 20);
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.latest-news {
+    $root: &;
+    position: relative;
+    padding: 60px 16px;
+    
+    @include media-breakpoint-up(xl) {
+        padding: 120px $col-width * 2;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 100px;
+
+        h2 {
+            color: $black;
+            @include font(40, 100);
+            line-height: 1;
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-left: auto;
+
+            &-date {
+                color: $gray;
+                @include font(16, 20);
+                line-height: 1.2;
+                margin-bottom: 6px;
+
+                @include media-breakpoint-up(xl) {
+                    margin-bottom: 40px;
+                }
+            }
+
+            a {
+                color: $black;
+                @include font(16, 20);
+                font-weight: 500;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-post {
+            width: 46%;
+            margin-bottom: 40px;
+
+            @include media-breakpoint-up(xl) {
+                width: $col-width * 4.5;
+            }
+        }
+    }
+}

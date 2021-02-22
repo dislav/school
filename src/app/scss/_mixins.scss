@@ -1,0 +1,30 @@
+$breakponts: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    fhd: 1760px
+);
+
+@mixin media-breakpoint-up($name) {
+    @each $breakpoint-name, $resolution in $breakponts {
+        @if $name == $breakpoint-name {
+            @media (min-width: $resolution) {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin font($min-size, $max-size) {
+    font-size: #{$min-size}px;
+
+    @include media-breakpoint-up(md) {
+        font-size: #{($min-size + $max-size) / 1.5}px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: #{$max-size}px;
+    }
+}

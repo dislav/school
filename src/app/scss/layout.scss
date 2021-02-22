@@ -1,0 +1,66 @@
+html {
+    font-family: $font-helvetica;
+}
+
+body {
+    position: relative;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, a {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+input, button {
+    font-family: inherit;
+    border: none;
+    border-radius: 0;
+    background: inherit;
+    padding: 0;
+    margin: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+input {
+    &::placeholder {
+        font-family: inherit;
+        font-weight: inherit;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.border {
+    &-top {
+        border-top: 1px solid $gray;
+    }
+
+    &-bottom {
+        border-bottom: 1px solid $gray;
+    }
+}

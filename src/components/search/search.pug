@@ -1,0 +1,9 @@
+include ../input/input
+
+mixin search(props)
+    .search.hide&attributes(attributes)
+        +svg('search').search__icon
+        +input({
+            name: 'search',
+            placeholder: 'Введите запрос'
+        }).search__input

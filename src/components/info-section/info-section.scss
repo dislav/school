@@ -1,0 +1,51 @@
+.info-section {
+    $root: &;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 16px;
+
+    @include media-breakpoint-up(xl) {
+        padding: 120px $col-width * 17 120px $col-width * 2;
+    }
+
+    p {
+        color: $black;
+        @include font(14, 20);
+        line-height: 1.2;
+        
+        &:first-child {
+            margin-bottom: 40px;
+
+            @include media-breakpoint-up(xl) {
+                margin-bottom: 160px;
+            }
+        }
+    }
+
+    &__image {
+        position: relative;
+        width: calc(100% + 32px);
+        padding-top: 50%;
+        margin-left: -16px;
+        margin-bottom: 40px;
+
+        @include media-breakpoint-up(xl) {
+            position: absolute;
+            width: $col-width * 10;
+            height: 400px;
+            right: $col-width * 2;
+            padding-top: 0;
+            margin-bottom: 0;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

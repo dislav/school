@@ -1,0 +1,26 @@
+include ../search/search
+
+mixin header(props)
+    header&attributes(attributes).header
+        .header__top
+            +svg('logo').header__top-logo
+            .header__top-links
+                a(href="#") О школе
+                a(href="#") Школьная жизнь
+                a(href="#") Родителям
+                a(href="#") Ученикам
+            .header__top-right
+                +search.header__top-right-search
+                a(href="#").header__top-right-button Как поступить
+        .header__menu
+            .header__menu-sandwich
+                span меню
+                .header__menu-sandwich-icon
+                    span
+            .header__menu-links
+                a(href="#") Новости
+                a(href="#") ЕГЭ ОГЭ ВПР
+                a(href="#") Олимпиады
+                a(href="#") История
+                a(href="#") Расписание
+                a(href="#") Сведения об образовательной организации

@@ -1,0 +1,164 @@
+.header {
+    $root: &;
+    display: flex;
+    align-items: center;
+    padding: 30px 16px;
+
+    @include media-breakpoint-up(xl) {
+        flex-wrap: wrap;
+        border-bottom: 1px solid $color1;
+        padding: 30px $col-width * 2 60px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        width: 50%;
+
+        @include media-breakpoint-up(xl) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &-logo {
+            width: 128px;
+            height: 51px;
+
+            @include media-breakpoint-up(xl) {
+                width: 180px;
+                height: 100px;
+                margin-right: $col-width * 2;
+            }
+        }
+
+        &-links {
+            display: none;
+
+            @include media-breakpoint-up(xl) {
+                display: flex;
+                align-items: center;
+            }
+
+            & > a {
+                color: $black;
+                @include font(16, 20);
+                font-weight: 500;
+                line-height: 1;
+                margin-right: 60px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &-right {
+            display: none;
+
+            @include media-breakpoint-up(xl) {
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+            }
+
+            &-search {
+                margin-right: 30px;
+            }
+
+            &-button {
+                color: $white;
+                @include font(16, 20);
+                line-height: 1;
+                background-color: $black;
+                padding: 14px 30px 12px;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        width: 50%;
+
+        @include media-breakpoint-up(xl) {
+            width: 100%;
+        }
+
+        &-sandwich {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+
+            @include media-breakpoint-up(xl) {
+                margin-left: 0;
+                margin-right: 60px;
+            }
+
+            & > span {
+                margin-right: 10px;
+
+                @include media-breakpoint-up(xl) {
+                    display: none;
+                }
+            }
+
+            &-icon {
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: 30px;
+                height: 14px;
+                cursor: pointer;
+
+                &:before, &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $black;
+                }
+
+                &:before {
+                    top: 0;
+                }
+
+                &:after {
+                    bottom: 0;
+                }
+
+                span {
+                    width: 100%;
+                    height: 2px;
+                    background-color: $black;
+                }
+            }
+        }
+
+        &-links {
+            display: none;
+
+            @include media-breakpoint-up(xl) {
+                display: flex;
+                align-items: center;
+            }
+
+            & > a {
+                color: $gray;
+                @include font(14, 16);
+                font-weight: 500;
+                line-height: 1;
+                margin-right: 60px;
+                transition: color .3s;
+
+                &:hover {
+                    color: $black;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

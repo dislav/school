@@ -1,0 +1,13 @@
+mixin input(props)
+    label.input&attributes(attributes)
+        if props && props.label
+            .input__label= props.label
+        input(
+            name= props.name
+            type= props.type || 'text'
+            value= props.defaultValue || false
+            placeholder= props.placeholder || false
+
+            data-required= props.required || false
+        )
+        .input__error
