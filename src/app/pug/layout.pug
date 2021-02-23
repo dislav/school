@@ -1,6 +1,7 @@
 include ./mixins
 include ../../components/header/header
 include ../../components/footer/footer
+include ../../components/sandwich/sandwich
 
 <!DOCTYPE html>
 html(lang="ru")
@@ -11,6 +12,7 @@ html(lang="ru")
             block title
     body(data-barba="wrapper")
         +header
+        +sandwich
         .content-wrapper
             block content
         +footer

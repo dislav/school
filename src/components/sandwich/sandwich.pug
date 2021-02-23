@@ -1,0 +1,22 @@
+mixin sandwich(props)
+    .sandwich&attributes(attributes)
+        .sandwich__header
+            a(href="#").sandwich__header-logo
+                +svg('logo')
+            .sandwich__header-close закрыть
+                .sandwich__header-close-icon
+        .sandwich__menu
+            a(href="#").sandwich__menu-link О школе
+                +svg('arrow-2')
+            a(href="#").sandwich__menu-link Школьная жизнь
+                +svg('arrow-2')
+            a(href="#").sandwich__menu-link Родителям
+                +svg('arrow-2')
+            a(href="#").sandwich__menu-link Ученикам
+                +svg('arrow-2')
+        .sandwich__footer
+            .sandwich__footer-contacts
+                p г. Санкт-Петербург, ул. Кирочная, д. 54 лит. А.
+                a(href="tel:+78122752124") +7 (812) 275-21-24
+                a(href="mailto:school163@mail.ru") school163@mail.ru
+            +link-contact({ text: 'Вконтакте' }).sandwich__footer-link

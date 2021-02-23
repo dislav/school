@@ -1,7 +1,7 @@
 include ../input/input
 
 mixin search(props)
-    .search.hide&attributes(attributes)
+    form(data-url="/").search.hide&attributes(attributes)
         +svg('search').search__icon
         +input({
             name: 'search',

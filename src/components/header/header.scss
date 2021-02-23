@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     padding: 30px 16px;
+    z-index: 20;
 
     @include media-breakpoint-up(xl) {
         flex-wrap: wrap;
