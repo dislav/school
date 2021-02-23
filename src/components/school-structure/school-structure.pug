@@ -1,2 +1,31 @@
+include ../link-button/link-button
+
 mixin school-structure(props)
     .school-structure&attributes(attributes)
+        h2 Структура школы
+        h3 Базовая образовательная программа
+        .school-structure__info
+            .school-structure__info-col
+                p Обучение ведётся на русском языке.
+                p Обучается иностранных граждан — 23 человека. Форма обучения — очная.
+                p Нормативный срок обучения 11 лет
+            .school-structure__info-col
+                h4 1-11 классы
+                p
+                    span 4 года 
+                    | начальное общее образование
+                p
+                    span 5 лет 
+                    | основное общее образование
+                p
+                    span 2 года 
+                    | среднее общее образование
+        .school-structure__image
+            +img({ src: '../../assets/images/home/3.jpg' })
+        .school-structure__additional
+            h2 Дополнительное образование
+            .school-structure__additional-content
+                p В школе работает отделение дополнительного образования, есть хорошо оборудованные спортивные залы и тренажерный зал. Работают платные курсы по различным предметам.
+                +link-button({
+                    text: 'Подробнее'
+                }).school-structure__additional-content-link

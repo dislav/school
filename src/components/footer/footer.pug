@@ -1,2 +1,42 @@
+include ../link-contact/link-contact
+
 mixin footer(props)
     footer.footer&attributes(attributes)
+        .footer__top
+            .footer__top-links
+                .footer__top-links-group
+                    .footer__top-links-group-title О школе
+                    a(href="#") История школы
+                    a(href="#") Администрация
+                    a(href="#") Учителя
+                    a(href="#") Расписание
+                    a(href="#") Безопасность
+                    a(href="#") Сведения об образовательной организации
+                    a(href="#") Отчеты
+                .footer__top-links-group
+                    .footer__top-links-group-title Школьная жизнь
+                    a(href="#") Новости
+                    a(href="#") Фотогаллерея
+                    a(href="#") Доска почета
+                    a(href="#") Воспитательная служба
+                    a(href="#") Расписание
+                    a(href="#") Безопасность
+                    a(href="#") Сведения об образовательной организации
+                .footer__top-links-group
+                    .footer__top-links-group-title Родителям
+                    a(href="#") Поступление
+                    a(href="#") Оплата обучения
+                .footer__top-links-group
+                    .footer__top-links-group-title Ученикам
+                    a(href="#") Расписание
+                    a(href="#") Олимпиады
+                    a(href="#") ЕГЭ ОГЭ ВПР
+            .footer__top-contacts
+                +link-contact({ text: 'Вконтакте' })
+                p г. Санкт-Петербург, ул. Кирочная, д. 54 лит. А.
+                a(href="tel:+78122752124") +7 (812) 275-21-24
+                a(href="mailto:school163@mail.ru") school163@mail.ru
+        .footer__bottom
+            .footer__bottom-year 2008-2021
+            .footer__bottom-copyright Design by 
+                a(href="#") Weekend Studio

@@ -3,6 +3,8 @@ include ../../components/home-hero/home-hero
 include ../../components/latest-news/latest-news
 include ../../components/info-section/info-section
 include ../../components/year-section/year-section
+include ../../components/school-structure/school-structure
+include ../../components/teacher-section/teacher-section
 
 block title
     | Школа 163 — Главная
@@ -22,4 +24,6 @@ block content
         title: '26',
         description: 'Среднее количество учащихся в классе'
     }).border-bottom
-    +latest-news
+    +latest-news.border-bottom
+    +school-structure.border-bottom
+    +teacher-section.border-bottom

@@ -1,0 +1,21 @@
+.link-contact {
+    $root: &;
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include font(14, 30);
+    text-transform: uppercase;
+    line-height: 1;
+
+    svg {
+        width: 18px;
+        height: 18px;
+        stroke: black;
+        margin-left: 6px;
+
+        @include media-breakpoint-up(xl) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

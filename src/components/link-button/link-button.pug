@@ -1,0 +1,4 @@
+mixin link-button(props)
+    a(href= props.href || '#').link-button&attributes(attributes)!= props.text
+        span
+            +svg('arrow')

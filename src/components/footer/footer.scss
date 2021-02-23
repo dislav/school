@@ -1,3 +1,159 @@
 .footer {
     $root: &;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 16px 16px;
+
+    @include media-breakpoint-up(xl) {
+        padding: 60px $col-width * 2 30px;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include media-breakpoint-up(xl) {
+            flex-direction: row;
+            margin-bottom: 100px;
+        }
+
+        &-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @include media-breakpoint-up(xl) {
+                justify-content: flex-start;
+            }
+
+            &-group {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 46%;
+                margin-bottom: 60px;
+
+                @include media-breakpoint-up(xl) {
+                    width: $col-width * 3;
+                    margin-right: $col-width;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+
+                &-title {
+                    color: $gray;
+                    @include font(14, 14);
+                    line-height: 1.4;
+                    margin-bottom: 34px;
+
+                    @include media-breakpoint-up(xl) {
+                        margin-bottom: 60px;
+                    }
+                }
+
+                & > a {
+                    color: black;
+                    @include font(14, 20);
+                    @include link(black);
+                    line-height: 1.2;
+                    margin-bottom: 10px;
+
+                    @include media-breakpoint-up(xl) {
+                        margin-bottom: 20px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &-contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 46%;
+            margin-bottom: 60px;
+
+            @include media-breakpoint-up(xl) {
+                align-items: flex-end;
+                width: $col-width * 3;
+                margin-left: auto;
+            }
+
+            & > p {
+                color: black;
+                @include font(14, 20);
+                line-height: 1.2;
+                margin-bottom: 20px;
+
+                @include media-breakpoint-up(xl) {
+                    text-align: right;
+                    margin-bottom: 26px;
+                }
+            }
+
+            & > a {
+                color: black;
+                @include font(14, 20);
+                @include link(black);
+                margin-bottom: 20px;
+
+                @include media-breakpoint-up(xl) {
+                    margin-bottom: 26px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+
+        &-year {
+            color: $black;
+            @include font(12, 20);
+            line-height: 1.2;
+        }
+
+        &-copyright {
+            color: $black;
+            @include font(12, 20);
+            line-height: 1.2;
+            margin-left: auto;
+
+            @include media-breakpoint-up(xl) {
+                margin-right: $col-width * 9;
+            }
+
+            & > a {
+                position: relative;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: -4px;
+                    width: 0;
+                    height: 1px;
+                    background-color: $black;
+                    transform: translateX(-50%);
+                    transition: width .3s;
+                }
+
+                &:hover {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }

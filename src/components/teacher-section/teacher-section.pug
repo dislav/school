@@ -1,0 +1,16 @@
+include ../link-button/link-button
+
+mixin teacher-section(props)
+    .teacher-section&attributes(attributes)
+        h2 Учителя
+        .teacher-section__content
+            p Учителя гимназии — яркие личности и замечательные педагоги, их любят дети и признают коллеги, они авторы программ, курсов и наставники победителей олимпиад.
+            p Образовательный процесс выстраивается с применением лучших отечественных и международных практик. Старшая школа работает в партнерстве с ведущими вузами. Отражая в себе историю и мудрость, мы передаем самые актуальные знания нашим ученикам.
+            +link-button({ text: 'Преподовательский состав' }).teacher-section__content-link
+        .teacher-section__teacher
+            .teacher-section__teacher-image
+                .teacher-section__teacher-image-wrapper
+                    +img({ src: '../../assets/images/home/4.jpg' })
+            .teacher-section__teacher-content
+                h3 Антонова Лидия Викторовна
+                p Директор школы
