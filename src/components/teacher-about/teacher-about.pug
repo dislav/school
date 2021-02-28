@@ -1,0 +1,12 @@
+include ../link-back/link-back
+
+mixin teacher-about(props)
+    .teacher-about&attributes(attributes)
+        +link-back({ text: 'Все учителя' }).teacher-about__link
+        .teacher-about__image
+            .teacher-about__image-wrapper
+                +img({ src: props.image })
+        .teacher-about__content
+            h1= props.name
+            h2= props.status
+            .teacher-about__content-history!= props.history

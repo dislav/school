@@ -1,0 +1,23 @@
+.link-back {
+    $root: &;
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 20px;
+        height: 7px;
+        margin-right: 10px;
+
+        @include media-breakpoint-up(xl) {
+            width: 24px;
+            height: 10px;
+        }
+    }
+
+    &__text {
+        color: black;
+        @include font(14, 20);
+        line-height: 1;
+        @include link();
+    }
+}

@@ -1,0 +1,4 @@
+mixin link-back(props)
+    a(href="#").link-back&attributes(attributes)
+        +svg('arrow-3')
+        .link-back__text= props.text

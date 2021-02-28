@@ -1,0 +1,58 @@
+include ../teacher-card/teacher-card
+
+mixin teachers-list(props)
+    .teachers-list&attributes(attributes)
+        .teachers-list__hero
+            h1 Учителя
+            p Учителя гимназии — яркие личности и замечательные педагоги, их любят дети и признают коллеги, они авторы программ, курсов и наставники победителей олимпиад. 
+        .teachers-list__wrapper
+            +teacher-card({
+                image: '../../assets/images/teachers/1.jpg',
+                name: 'Антонова Лидия Викторовна',
+                status: 'Директор школы'
+            }).teachers-list__wrapper-item
+            +teacher-card({
+                image: '../../assets/images/teachers/2.jpg',
+                name: 'Поляков Константин Юрьевич',
+                status: 'Учитель информатики'
+            }).teachers-list__wrapper-item
+            +teacher-card({
+                image: '../../assets/images/teachers/3.jpg',
+                name: 'Смирнова Людмила Ивановна',
+                status: 'Заместитель директора по воспитательной работе'
+            }).teachers-list__wrapper-item
+            +teacher-card({
+                image: '../../assets/images/teachers/4.jpg',
+                name: 'Коцан Елена Олеговна',
+                status: 'Курирует 3 и 4 классы'
+            }).teachers-list__wrapper-item
+            +teacher-card({
+                image: '../../assets/images/teachers/5.jpg',
+                name: 'Антонова Лидия Викторовна',
+                status: 'Директор школы'
+            }).teachers-list__wrapper-item
+            +teacher-card({
+                image: '../../assets/images/teachers/6.jpg',
+                name: 'Поляков Константин Юрьевич',
+                status: 'Учитель информатики'
+            }).teachers-list__wrapper-item
+            +teacher-card({
+                image: '../../assets/images/teachers/7.jpg',
+                name: 'Смирнова Людмила Ивановна',
+                status: 'Заместитель директора по воспитательной работе'
+            }).teachers-list__wrapper-item
+            +teacher-card({
+                image: '../../assets/images/teachers/8.jpg',
+                name: 'Коцан Елена Олеговна',
+                status: 'Курирует 3 и 4 классы'
+            }).teachers-list__wrapper-item
+            +teacher-card({
+                image: '../../assets/images/teachers/1.jpg',
+                name: 'Антонова Лидия Викторовна',
+                status: 'Директор школы'
+            }).teachers-list__wrapper-item
+            +teacher-card({
+                image: '../../assets/images/teachers/2.jpg',
+                name: 'Поляков Константин Юрьевич',
+                status: 'Учитель информатики'
+            }).teachers-list__wrapper-item

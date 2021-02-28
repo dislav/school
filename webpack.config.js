@@ -7,12 +7,13 @@ const fs = require('fs');
 const colors = require('colors');
 
 console.log(`[ ${colors.green.bold('START')} ] Сборка проекта\n`);
+console.log(`[ ${colors.blue.bold('PAGES')} ] Сборка страниц:`);
 
 const viewsPath = path.join('src', 'pages');
 const views = fs.readdirSync(viewsPath);
 
 const pages = views.map(view => {
-    console.log(`[ ${colors.blue.bold('PAGE')} ] Сборка страницы: ${colors.bold(`${view}.html`)}`);
+    console.log(`• ${colors.bold(`${view} — ${colors.blue(`http://localhost:3000/${view}.html`)}`)}`);
     return new HtmlWebpackPlugin({
         filename: `${view}.html`,
         template: `./src/pages/${view}/${view}.pug`

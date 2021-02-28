@@ -1,0 +1,8 @@
+mixin teacher-card(props)
+    a(href="#").teacher-card&attributes(attributes)
+        .teacher-card__image
+            +img({ src: props.image })
+        .teacher-card__content
+            h2= props.name
+            p= props.status
+            span Подробнее

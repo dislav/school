@@ -1,0 +1,72 @@
+.teachers-list {
+    $root: &;
+    position: relative;
+
+    &__hero {
+        padding: 40px 16px;
+
+        @include media-breakpoint-up(xl) {
+            border-bottom: 1px solid $color1;
+            padding: 100px $col-width * 2 50px;
+        }
+
+        h1 {
+            color: black;
+            @include font(40, 100);
+            text-transform: uppercase;
+            font-weight: 300;
+            line-height: 1;
+            margin-bottom: 40px;
+            
+            @include media-breakpoint-up(xl) {
+                margin-bottom: 76px;
+            }
+        }
+
+        p {
+            width: 46%;
+            color: black;
+            @include font(14, 20);
+            line-height: 1.4;
+
+            @include media-breakpoint-up(xl) {
+                width: $col-width * 7;
+            }
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        border-top: 1px solid $color1;
+        border-left: 1px solid $color1;
+        margin: 0 16px 40px;
+
+        @include media-breakpoint-up(xl) {
+            width: $col-width * 21;
+            margin: 40px $col-width * 1.5 120px;
+        }
+
+        &-item {
+            position: relative;
+            width: 50%;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-right: 1px solid $color1;
+                border-bottom: 1px solid $color1;
+                z-index: 1;
+            }
+        
+            @include media-breakpoint-up(xl) {
+                width: $col-width * 5.243;
+            }
+        }
+    }
+}

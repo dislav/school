@@ -1,0 +1,51 @@
+.teacher-slider {
+    $root: &;
+    position: relative;
+    padding-bottom: 40px;
+
+    @include media-breakpoint-up(xl) {
+        padding-bottom: 120px;
+    }
+
+    .swiper-wrapper {
+        height: 180px;
+        padding-left: 16px;
+
+        @include media-breakpoint-up(xl) {
+            height: auto;
+            padding-left: $col-width * 2;
+        }
+
+        .swiper-slide {
+            width: auto;
+            height: 100%;
+            margin-right: 20px;
+            overflow: hidden;
+
+            &:last-child {
+                margin-right: 32px;
+
+                @include media-breakpoint-up(xl) {
+                    margin-right: $col-width * 4;
+                }
+            }
+
+            @include media-breakpoint-up(xl) {
+                width: auto;
+                height: auto;
+                margin-right: 60px;
+            }
+
+            img {
+                width: auto;
+                height: 100%;
+                object-fit: cover;
+
+                @include media-breakpoint-up(xl) {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

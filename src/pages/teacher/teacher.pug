@@ -1,0 +1,28 @@
+extends ../../app/pug/layout
+include ../../components/teacher-about/teacher-about
+include ../../components/year-section/year-section
+include ../../components/teacher-paragraph/teacher-paragraph
+include ../../components/teacher-slider/teacher-slider
+
+block title
+    | Школа 163 — История школы
+
+block content
+    +teacher-about({
+        image: '../../assets/images/teachers/1.jpg',
+        name: 'Антонова Лидия Викторовна',
+        status: 'Директор школы',
+        history: '<p>Закончила Государственный педагогический университет им. А.И. Герцена. Педагогический стаж — 22 года. Учитель и завуч высшей категории. С 2010 года руководит 163-й школой. Депутат Муниципального совета МО Смольнинское. </p>'
+    }).border-bottom
+    +year-section({
+        title: '22',
+        description: 'Года педагогического стажа'
+    }).border-bottom
+    +year-section({
+        title: '2010',
+        description: 'Год начала управления 163-й школой'
+    }).border-bottom
+    +teacher-paragraph({
+        content: '<p>Текст РЫБА! Закончила Государственный педагогический университет им. А.И. Герцена. Педагогический стаж — 22 года. Учитель и завуч высшей категории. С 2010 года руководит 163-й школой. Депутат Муниципального совета МО Смольнинское.</p><p>В 1837 году на углу Кирочной и Таврической улиц по проекту известного архитектора А.И. Штакеншнейдера было построено новое здание Мариинского института, в котором сейчас располагается школа № 163.</p>'
+    })
+    +teacher-slider.border-bottom

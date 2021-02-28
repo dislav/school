@@ -14,9 +14,9 @@ namespace Component {
             this.nRoot = component;
         }
 
-        getElement = (name: string) => this.nRoot.querySelector(`.${this.nRootName}__${name}`);
+        getElement = (name: string): HTMLElement => this.nRoot.querySelector(`.${this.nRootName}__${name}`);
     
-        getElements = (name: string) => Array.from(this.nRoot.querySelectorAll(`.${this.nRootName}__${name}`));
+        getElements = (name: string): HTMLElement[] => Array.from(this.nRoot.querySelectorAll(`.${this.nRootName}__${name}`));
     }
 
     export const getComponent = (name: string, target: Document | HTMLElement = document): ComponentProps => ({

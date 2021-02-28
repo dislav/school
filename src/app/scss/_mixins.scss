@@ -24,6 +24,10 @@ $breakponts: (
         font-size: #{($min-size + $max-size) / 1.5}px;
     }
 
+    @include media-breakpoint-up(xl) {
+        font-size: #{($min-size + $max-size) / 2.35}px;
+    }
+
     @include media-breakpoint-up(xxl) {
         font-size: #{$max-size}px;
     }
