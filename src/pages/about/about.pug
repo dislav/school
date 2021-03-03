@@ -4,4 +4,25 @@ block title
     | Школа 163 — О школе
 
 block content
-    h1 about
+    +about-lead.border-bottom
+    +link-section({ text: 'Новости' }).border-bottom
+    +link-section({ text: 'История школы' }).border-bottom
+    +link-section({ text: 'Распорядок' }).border-bottom
+    +link-section({ text: 'Достижения' }).border-bottom
+    +link-section({ text: 'Направления образования' }).border-bottom
+    +info-section-2({
+        content: '<p>Уже 223 лет в стенах ГБОУ школы № 163 учат и воспитывают детей. В 1837 году в здание, построенное по проекту архитектора Андрея Ивановича Штакеншнейдера, переселились воспитанницы и служащие первого Российского Института – Мариинского женского Института! Он был основан 220 лет назад Императрицей Марией Фёдоровной на её собственные средства как училище для сирот. </p>',
+        link: 'История школы'
+    }).border-bottom
+    +year-section({
+        title: '1837',
+        description: 'Год ввода в эксплуатацию'
+    }).border-bottom
+    +year-section({
+        title: '513',
+        description: 'Количество учеников'
+    }).border-bottom
+    +year-section({
+        title: '26',
+        description: 'Среднее количество учащихся в классе'
+    }).border-bottom

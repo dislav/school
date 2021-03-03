@@ -1,0 +1,17 @@
+.link-download {
+    $root: &;
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 22px;
+        height: 22px;
+        margin-right: 20px;
+    }
+
+    span {
+        color: black;
+        @include font(14, 20);
+        @include link(black);
+    }
+}

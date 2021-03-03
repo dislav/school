@@ -1,0 +1,49 @@
+.image-annotate {
+    $root: &;
+
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 22px;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-up(xl) {
+            max-width: 70%;
+        }
+
+        p {
+            color: black;
+            @include font(14, 20);
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+
+            @include media-breakpoint-up(xl) {
+                margin-bottom: 14px;
+            }
+        }
+
+        span {
+            color: $gray;
+            @include font(14, 15);
+            line-height: 1.3;
+        }
+    }
+}

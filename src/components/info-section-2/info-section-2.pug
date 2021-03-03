@@ -1,0 +1,4 @@
+mixin info-section-2(props)
+    .info-section-2&attributes(attributes)
+        .info-section-2__content!= props.content
+        +link-button({ text: props.link }).info-section-2__link

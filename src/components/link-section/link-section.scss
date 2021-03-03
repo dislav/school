@@ -1,0 +1,36 @@
+.link-section {
+    $root: &;
+    position: relative;
+    width: 100%;
+    padding: 12px 16px 16px;
+
+    @include media-breakpoint-up(xl) {
+        padding: 26px $col-width * 2 20px;
+    }
+
+    a {
+        color: black;
+        @include font(14, 30);
+        font-weight: 300;
+        text-transform: uppercase;
+        line-height: 1.2;
+        @include link(black);
+
+        &:hover {
+            svg {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        svg {
+            width: 11px;
+            height: 21px;
+            stroke: black;
+            opacity: 0;
+            visibility: hidden;
+            margin-left: 30px;
+            transition: opacity .3s, visibility .3s;
+        }
+    }
+}

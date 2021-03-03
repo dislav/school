@@ -1,0 +1,7 @@
+mixin image-annotate(props)
+    .image-annotate&attributes(attributes)
+        .image-annotate__wrapper
+            +img({ src: props.image })
+        .image-annotate__content
+            p= props.title
+            span= props.description

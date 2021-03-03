@@ -1,0 +1,11 @@
+mixin history-section(props)
+    .history-section&attributes(attributes)
+        h2= props.title
+        .history-section__content
+            .history-section__content-info!= props.content
+                +link-button({ text: `Читать подробнее: ${props.title}` }).history-section__content-info-link
+            +image-annotate({
+                image: props.image,
+                title: props.imageTitle,
+                description: props.imageDescription
+            }).history-section__content-image
