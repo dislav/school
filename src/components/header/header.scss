@@ -2,13 +2,16 @@
     $root: &;
     display: flex;
     align-items: center;
-    padding: 30px 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @include offset();
     z-index: 20;
 
     @include media-breakpoint-up(xl) {
         flex-wrap: wrap;
         border-bottom: 1px solid $color1;
-        padding: 30px $col-width * 2 60px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     &__top {

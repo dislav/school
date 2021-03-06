@@ -1,0 +1,6 @@
+mixin paragraph(props)
+    .paragraph&attributes(attributes)
+        if props.title
+            h2= props.title
+        each text in props.texts
+            .paragraph__text!= text

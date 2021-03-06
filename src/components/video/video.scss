@@ -1,0 +1,25 @@
+.video {
+    $root: &;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include offset();
+
+    @include media-breakpoint-up(xl) {
+        padding-top: 76px;
+        padding-bottom: 120px;
+    }
+
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

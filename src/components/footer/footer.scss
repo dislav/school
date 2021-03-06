@@ -3,10 +3,13 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 30px 16px 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @include offset();
 
     @include media-breakpoint-up(xl) {
-        padding: 60px $col-width * 2 30px;
+        padding-top: 60px;
+        padding-bottom: 30px;
     }
 
     &__top {

@@ -1,0 +1,8 @@
+mixin post-lead(props)
+    .post-lead&attributes(attributes)
+        h1= props.title
+        .post-lead__content
+            .post-lead__content-text!= props.content
+            .post-lead__content-image
+                .post-lead__content-image-wrapper
+                    +img({ src: props.image })

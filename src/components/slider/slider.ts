@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import Component, { ComponentProps } from '../../app/js/component';
 
-export default class TeacherSlider extends Component.Default {
+export default class Slider extends Component.Default {
     nSwiper: Swiper;
 
     constructor(element: ComponentProps) {

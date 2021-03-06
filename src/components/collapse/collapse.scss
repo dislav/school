@@ -1,0 +1,61 @@
+.collapse {
+    $root: &;
+    position: relative;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 26px;
+        @include offset();
+        cursor: pointer;
+
+        @include media-breakpoint-up(xl) {
+            padding-top: 36px;
+            padding-bottom: 30px;
+        }
+
+        h2 {
+            color: black;
+            @include font(14, 30);
+            text-transform: uppercase;
+        }
+
+        svg {
+            stroke: black;
+            width: 20px;
+            height: 30px;
+            will-change: transform;
+            transform: rotate(90deg) translateX(-4px);
+            transition: transform .3s;
+
+            @include media-breakpoint-up(xl) {
+                margin-left: 30px;
+            }
+        }
+    }
+
+    &__content {
+        @include offset();
+        overflow: hidden;
+        transition: height .3s, padding .3s;
+    }
+
+    &.active {
+        #{$root} {
+            &__head {
+                svg {
+                    transform: rotate(-90deg) translateX(4px);
+                }
+            }
+
+            &__content {
+
+                @include media-breakpoint-up(xl) {
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                }
+            }
+        }
+    }
+}

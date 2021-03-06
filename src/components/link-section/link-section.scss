@@ -2,10 +2,13 @@
     $root: &;
     position: relative;
     width: 100%;
-    padding: 12px 16px 16px;
+    padding-top: 12px;
+    padding-bottom: 16px;
+    @include offset();
 
     @include media-breakpoint-up(xl) {
-        padding: 26px $col-width * 2 20px;
+        padding-top: 26px;
+        padding-bottom: 20px;
     }
 
     a {

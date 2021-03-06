@@ -1,0 +1,7 @@
+mixin collapse(props)
+    .collapse&attributes(attributes)
+        .collapse__head
+            h2= props.title
+            +svg('arrow-2')
+        .collapse__content(style='height: 0')
+            block

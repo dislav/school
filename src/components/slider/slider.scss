@@ -1,4 +1,4 @@
-.teacher-slider {
+.slider {
     $root: &;
     position: relative;
     padding-bottom: 40px;
@@ -11,8 +11,20 @@
         height: 180px;
         padding-left: 16px;
 
-        @include media-breakpoint-up(xl) {
+        @include media-breakpoint-up(md) {
             height: auto;
+            padding-left: 29.3333333333px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-left: 44px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding-left: $col-width;
+        }
+
+        @include media-breakpoint-up(fhd) {
             padding-left: $col-width * 2;
         }
 

@@ -17,6 +17,31 @@ $breakponts: (
     }
 }
 
+@mixin offset($mobile: 16, $desktop: 160, $property: 'padding') {
+    #{$property}-left: #{$mobile}px;
+    #{$property}-right: #{$mobile}px;
+
+    @include media-breakpoint-up(md) {
+        #{$property}-left: #{($mobile + $desktop) / 6}px;
+        #{$property}-right: #{($mobile + $desktop) / 6}px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        #{$property}-left: #{($mobile + $desktop) / 4}px;
+        #{$property}-right: #{($mobile + $desktop) / 4}px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        #{$property}-left: #{$desktop / 2 / 1920 * 100}vw;
+        #{$property}-right: #{$desktop / 2 / 1920 * 100}vw;
+    }
+
+    @include media-breakpoint-up(fhd) {
+        #{$property}-left: #{$desktop / 1920 * 100}vw;
+        #{$property}-right: #{$desktop / 1920 * 100}vw;
+    }
+}
+
 @mixin font($min-size, $max-size) {
     font-size: #{$min-size}px;
 

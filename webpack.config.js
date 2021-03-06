@@ -7,7 +7,7 @@ const fs = require('fs');
 const colors = require('colors');
 
 console.log(`[ ${colors.green.bold('START')} ] Сборка проекта\n`);
-console.log(`[ ${colors.blue.bold('PAGES')} ] Сборка страниц:`);
+console.log(`[ ${colors.blue.bold('INFO')} ] Страницы проекта:`);
 
 const viewsPath = path.join('src', 'pages');
 const views = fs.readdirSync(viewsPath);
