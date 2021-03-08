@@ -1,0 +1,11 @@
+.image-section {
+    $root: &;
+    position: relative;
+    @include offset();
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

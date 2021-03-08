@@ -1,0 +1,15 @@
+mixin sandwich-link(props)
+    .sandwich-link&attributes(attributes)
+        .sandwich-link__title= props.title
+            +svg('arrow-2')
+        .sandwich-link__wrapper
+            .sandwich-link__wrapper-close
+                +svg('arrow-3')
+                | Назад
+            a(href="#") История школы
+            a(href="#") Администрация
+            a(href="#") Учителя
+            a(href="#") Расписание
+            a(href="#") Безопасность
+            a(href="#") Сведения об образовательной организации
+            a(href="#") Отчеты

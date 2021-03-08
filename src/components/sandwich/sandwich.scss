@@ -9,15 +9,9 @@
     height: 0;
     background-color: $white;
     transition: height .3s ease, padding .3s ease;
-    padding-left: 16px;
-    padding-right: 16px;
+    @include offset();
     overflow: hidden;
     z-index: 40;
-
-    @include media-breakpoint-up(xl) {
-        padding-left: $col-width * 2;
-        padding-right: $col-width * 2;
-    }
 
     &__header {
         display: flex;
@@ -73,6 +67,7 @@
     }
 
     &__menu {
+        position: relative;
         display: flex;
         flex-direction: column;
         margin-bottom: 40px;
@@ -81,39 +76,19 @@
             margin-bottom: 60px;
         }
 
-        & > a {
-            display: flex;
-            align-items: center;
-            color: $black;
-            @include font(30, 70);
-            text-transform: uppercase;
-            line-height: 1;
+        &-link {
             margin-bottom: 20px;
-
-            @include media-breakpoint-up(xl) {
-                margin-bottom: 80px;
-            }
-
+            
             &:last-child {
                 margin-bottom: 0;
             }
 
-            &:hover {
-                svg {
-                    opacity: 1;
-                    visibility: visible;
-                }
+            @include media-breakpoint-up(xl) {
+                margin-bottom: 30px;
             }
 
-            svg {
-                stroke: $black;
-                width: 25px;
-                height: 48px;
-                opacity: 0;
-                visibility: hidden;
-                margin-left: 30px;
-                margin-top: -14px;
-                transition: opacity .3s, visibility .3s;
+            @include media-breakpoint-up(fhd) {
+                margin-bottom: 80px;
             }
         }
     }

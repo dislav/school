@@ -6,14 +6,10 @@ mixin sandwich(props)
             .sandwich__header-close закрыть
                 .sandwich__header-close-icon
         .sandwich__menu
-            a(href="#").sandwich__menu-link О школе
-                +svg('arrow-2')
-            a(href="#").sandwich__menu-link Школьная жизнь
-                +svg('arrow-2')
-            a(href="#").sandwich__menu-link Родителям
-                +svg('arrow-2')
-            a(href="#").sandwich__menu-link Ученикам
-                +svg('arrow-2')
+            +sandwich-link({ title: 'О школе' }).sandwich__menu-link
+            +sandwich-link({ title: 'Школьная жизнь' }).sandwich__menu-link
+            +sandwich-link({ title: 'Родителям' }).sandwich__menu-link
+            +sandwich-link({ title: 'Ученикам' }).sandwich__menu-link
         .sandwich__footer
             .sandwich__footer-contacts
                 p г. Санкт-Петербург, ул. Кирочная, д. 54 лит. А.

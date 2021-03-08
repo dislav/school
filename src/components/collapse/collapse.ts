@@ -18,7 +18,7 @@ export default class Collapse extends Component.Default {
     onClickCollapse = () => {
         if (!this.active) {
             this.nRoot.classList.add('active');
-            this.content.style.cssText = `height: ${this.contentHeight + 80}px`;
+            this.content.style.cssText = `height: ${this.contentHeight}px`;
             this.active = true;
         } else {
             this.nRoot.classList.remove('active');

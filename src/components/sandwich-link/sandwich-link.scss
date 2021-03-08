@@ -1,0 +1,109 @@
+.sandwich-link {
+    $root: &;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        color: $black;
+        @include font(30, 70);
+        text-transform: uppercase;
+        line-height: 1;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: opacity .3s .3s, visibility .3s .3s;
+        cursor: pointer;
+
+        &:hover {
+            svg {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    
+        svg {
+            stroke: $black;
+            width: 25px;
+            height: 48px;
+            opacity: 0;
+            visibility: hidden;
+            margin-left: 30px;
+            margin-top: -14px;
+            transition: opacity .3s, visibility .3s;
+        }
+    }
+
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s, visibility .3s;
+
+        @include media-breakpoint-up(xl) {
+            left: $col-width * 12;
+        }
+
+        @include media-breakpoint-up(fhd) {
+            left: $col-width * 13;
+        }
+
+        &-close {
+            display: flex;
+            align-items: center;
+            color: black;
+            @include font(14, 20);
+            margin-bottom: 40px;
+
+            @include media-breakpoint-up(xl) {
+                display: none;
+            }
+
+            svg {
+                stroke: black;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                margin-top: -2px;
+            }
+        }
+
+        a {
+            color: black;
+            @include font(20, 30);
+            line-height: 1;
+            @include link(black);
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &.active {
+        #{$root} {
+            &__wrapper {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .link--open & {
+        #{$root}__title {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .3s, visibility .3s;
+
+            @include media-breakpoint-up(xl) {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
