@@ -2,15 +2,15 @@ mixin slider(props)
     .slider&attributes(attributes)
         .swiper-container.slider__container
             .swiper-wrapper
-                .swiper-slide
+                .swiper-slide.modal-link(data-id="photo-slider" data-index="0")
                     +img({ src: '../../assets/images/teacher/slider/1.jpg' })
-                .swiper-slide
+                .swiper-slide.modal-link(data-id="photo-slider" data-index="1")
                     +img({ src: '../../assets/images/teacher/slider/2.jpg' })
-                .swiper-slide
+                .swiper-slide.modal-link(data-id="photo-slider" data-index="2")
                     +img({ src: '../../assets/images/teacher/slider/3.jpg' })
-                .swiper-slide
+                .swiper-slide.modal-link(data-id="photo-slider" data-index="3")
                     +img({ src: '../../assets/images/teacher/slider/1.jpg' })
-                .swiper-slide
+                .swiper-slide.modal-link(data-id="photo-slider" data-index="4")
                     +img({ src: '../../assets/images/teacher/slider/2.jpg' })
-                .swiper-slide
+                .swiper-slide.modal-link(data-id="photo-slider" data-index="5")
                     +img({ src: '../../assets/images/teacher/slider/3.jpg' })

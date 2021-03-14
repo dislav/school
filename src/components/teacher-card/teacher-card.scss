@@ -74,10 +74,10 @@
             color: $gray;
             @include font(12, 20);
             line-height: 1.4;
-            margin-top: auto;
 
             @include media-breakpoint-up(xl) {
                 margin-bottom: 12px;
+                margin-top: auto;
             }
         }
 

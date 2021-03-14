@@ -1,0 +1,69 @@
+.modal-slider {
+    $root: &;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 100px 0;
+    
+    @include media-breakpoint-up(xl) {
+        padding: 140px 0;
+    }
+
+    .swiper-container {
+        height: 100%;
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+
+                @include media-breakpoint-up(xl) {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &__navigation {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transform: translateY(-50%);
+        z-index: 10;
+
+        @include media-breakpoint-up(xl) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 $col-width * 2;
+        }
+
+        &-button {
+            cursor: pointer;
+
+            @include media-breakpoint-up(xl) {
+                width: 33px;
+                height: 63px;
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+
+            &-prev {
+                svg {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+}

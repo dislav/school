@@ -13,6 +13,7 @@ import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import Slider from '../../components/slider/slider';
 import Collapse from '../../components/collapse/collapse';
+import Modal from '../../components/modal/modal';
 
 fromEvent(document, 'DOMContentLoaded').subscribe(() => {
     new Header(getComponent('header'));
@@ -23,6 +24,9 @@ fromEvent(document, 'DOMContentLoaded').subscribe(() => {
 
     if (getComponent('collapse'))
         getComponents('collapse').forEach((component) => new Collapse(component));
+
+    if (getComponent('modal'))
+        getComponents('modal').forEach((component) => new Modal(component));
 
     const images = document.querySelectorAll('img');
     objectFitImages(images);

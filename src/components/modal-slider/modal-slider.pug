@@ -1,0 +1,22 @@
+mixin modal-slider(props)
+    .modal-slider&attributes(attributes)
+        .swiper-container.modal-slider__container
+            .swiper-wrapper
+                .swiper-slide
+                    +img({ src: '../../assets/images/teacher/slider/1.jpg' })
+                .swiper-slide
+                    +img({ src: '../../assets/images/teacher/slider/2.jpg' })
+                .swiper-slide
+                    +img({ src: '../../assets/images/teacher/slider/3.jpg' })
+                .swiper-slide
+                    +img({ src: '../../assets/images/teacher/slider/1.jpg' })
+                .swiper-slide
+                    +img({ src: '../../assets/images/teacher/slider/2.jpg' })
+                .swiper-slide
+                    +img({ src: '../../assets/images/teacher/slider/3.jpg' })
+            .modal-slider__navigation
+                .modal-slider__navigation-button.modal-slider__navigation-button-prev
+                    +svg('arrow-slider')
+                .modal-slider__navigation-button.modal-slider__navigation-button-next
+                    +svg('arrow-slider')
+
