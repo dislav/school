@@ -11,8 +11,11 @@ export default class Header extends Component.Default {
     constructor(element: ComponentProps) {
         super(element);
 
-        this.nSearch = new Search(getComponent('search', this.nRoot));
-        this.nSandwich = new Sandwich(getComponent('sandwich'), this);
+        if (getComponent('search', this.nRoot).component)
+            this.nSearch = new Search(getComponent('search', this.nRoot));
+
+        if (getComponent('sandwich', this.nRoot))
+            this.nSandwich = new Sandwich(getComponent('sandwich'), this);
 
         fromEvent(this.getElement('menu-sandwich'), 'click').subscribe(this.onClickSandwich);
     }
@@ -25,14 +28,13 @@ export default class Header extends Component.Default {
             window.scrollTo(0, 0);
             document.body.classList.add('fixed-scroll');
         }, 400);
-    }
+    };
 
     closeSandwich = () => {
         document.body.classList.remove('sandwich--open');
         document.body.classList.remove('fixed-scroll');
         window.scrollTo(0, this.scrollY);
-    }
+    };
 
-    destroy = () => {
-    }
+    destroy = () => {};
 }

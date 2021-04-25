@@ -22,24 +22,24 @@ const pages = views.map(view => {
 
 console.log('');
 
-const dataPath = path.join('src', 'assets', 'data');
-const dataJson = {};
-fs.readdirSync(dataPath).forEach(file => {
-    if (file.indexOf('.json') !== -1) {
-        const fileName = file.slice(0, file.indexOf('.json'))
+// const dataPath = path.join('src', 'assets', 'data');
+// const dataJson = {};
+// fs.readdirSync(dataPath).forEach(file => {
+//     if (file.indexOf('.json') !== -1) {
+//         const fileName = file.slice(0, file.indexOf('.json'))
 
-        try {
-            dataJson[fileName] = JSON.parse(fs.readFileSync(path.join(dataPath, file)));
-            console.log(`[ ${colors.blue.bold('DATA')} ] Загрузка файла: ${colors.bold(file)}`);
-        } catch (e) {
-            console.log(`[ ${colors.red.bold('ERROR')} ] ${colors.bold(file)}: ${e.message}`);
-        }
-    } else {
-        console.log(`[ ${colors.red.bold('ERROR')} ] Ошибка загрузки, файл ${colors.bold(file)} имеет неверное расширение`);
-    }
-});
+//         try {
+//             dataJson[fileName] = JSON.parse(fs.readFileSync(path.join(dataPath, file)));
+//             console.log(`[ ${colors.blue.bold('DATA')} ] Загрузка файла: ${colors.bold(file)}`);
+//         } catch (e) {
+//             console.log(`[ ${colors.red.bold('ERROR')} ] ${colors.bold(file)}: ${e.message}`);
+//         }
+//     } else {
+//         console.log(`[ ${colors.red.bold('ERROR')} ] Ошибка загрузки, файл ${colors.bold(file)} имеет неверное расширение`);
+//     }
+// });
 
-console.log('');
+// console.log('');
 
 module.exports = (env) => {
     const dev = env ? env.WEBPACK_SERVE : false;
@@ -78,9 +78,9 @@ module.exports = (env) => {
                         },
                         {
                             loader: 'pug-html-loader',
-                            options: {
-                                data: { dataJson }
-                            }
+                            // options: {
+                            //     data: { dataJson }
+                            // }
                         }
                     ]
                 },
